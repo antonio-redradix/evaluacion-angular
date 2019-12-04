@@ -7,15 +7,14 @@ import { AppComponent } from './app.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 import { WeekWeatherComponent } from './week-weather/week-weather.component';
 import { DayWeatherComponent } from './day-weather/day-weather.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const appRoutes: Routes = [
-  { path: '', component: WeatherWidgetComponent },
   { path: 'widget', component: WeatherWidgetComponent },
   { path: 'weather', component: WeatherWidgetComponent },
   { path: 'day', component: WeatherWidgetComponent },
   { path: 'day/:id', component: WeatherWidgetComponent },
-
+  { path: '', redirectTo: 'widget', pathMatch: 'full' },
+  { path: '**', redirectTo: 'widget', pathMatch: 'full' },
 ];
 
 @NgModule({
