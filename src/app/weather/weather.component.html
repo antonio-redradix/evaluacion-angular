@@ -1,0 +1,4 @@
+<div class="timeWidget">
+  <app-weather-day [mySelectedDay]="selectedDay" [myDegrees] = "degrees" (selectDegreesEvent)="updateSelectedDegrees($event)" class="timeWidget--upperSection"></app-weather-day>
+  <app-weather-week [daysList]="days" [mySelectedDay]="selectedDay" (selectDayEvent)="updateSelectedDay($event)" class="timeWidget--lowerSection"></app-weather-week>
+</div>

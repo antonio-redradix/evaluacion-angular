@@ -1,0 +1,108 @@
+@import '../../styles';
+
+.timeWidgetElements {
+  &--main {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    &--upper {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      padding: 16px 16px 0px 16px;
+    }
+    &--lower {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      padding: 0px 16px 16px 16px;
+      &--temperature {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+  &--options {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    &--info {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      padding: 16px 16px 0px 16px;
+    }
+    &--buttons {
+      height: 50%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 8px 16px 8px 16px;
+    }
+  }
+}
+
+.timeIcon {
+    width: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+
+    &__small {
+        width: 50px;
+        height: auto;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: #f5f5f5;
+    @extend .textColors__button;
+    border: 1px solid #dcdcdc; 
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &__left {
+        @extend .button;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-right: 0px;
+    }
+    &__right {
+        @extend .button;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-left: 0px;
+    }
+        
+        cursor: pointer;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        height: 27px;
+        line-height: 27px;
+        min-width: 54px;
+        text-decoration: none;
+    
+    &:hover {
+        background-color: #F8F8F8;	
+        border: 1px solid #C6C6C6;
+        @extend .textColors__buttonHover;
+        box-shadow: 0px 1px 1px rgba(0,0,0,.1);
+    }
+
+    &--pressed {
+        background-color: rgb(216, 216, 216);
+        box-shadow: inset 1px 2px 2px rgba(0,0,0,.1);
+    }
+}
+
+.pointerHand {
+  cursor: pointer;
+}
+
+.highlighted {
+  color: black;
+  border: 1px solid #dcdcdc;
+  border-radius: 1px;
+}
