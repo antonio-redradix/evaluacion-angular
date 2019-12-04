@@ -1,0 +1,43 @@
+<!-- *ngIf="weather !== undefined" -->
+
+<div *ngIf="selectedWeather !== undefined" >
+        <div class="main-container__top">
+                <div class="main-container__top__left">
+                    <div class="main-container__top__left__top">
+                        <p class="main-container__top__left__top--city">Madrid</p>
+                        <p class="main-container__top__left__top--status">{{selectedWeather.day}} 08:00</p>
+                        <p class="main-container__top__left__top--status"> {{selectedWeather.weather}} </p>
+                    </div>
+                    <div class="main-container__top__left__bottom">
+                        <div class="main-container__top__left__bottom__img" >
+                                <img src="{{selectedWeather.imgRoute}}" alt="">
+                            <!-- <img src="../../assets/rain_s_cloudy.png" alt=""> -->
+ 
+                        </div>
+                        <div class="main-container__top__left__bottom__temp">
+                            <div class="main-container__top__left__bottom__temp--arg">
+                                <P>{{selectedWeather.current_temp}}</P>  
+                            </div>
+                            <div class="main-container__top__left__bottom__temp--units">
+                                 <p>°C |<a href="#">°F</a></p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="main-container__top__right">
+                    <div class="main-container__top__right__detail">
+                        <p>Precipitation: {{selectedWeather.precip}}</p> 
+                        <p>Humidity: {{selectedWeather.humidity}}</p> 
+                        <p>Wind: {{selectedWeather.wind}}</p> 
+ 
+                    </div>
+                    <div class="main-container__top__right__button">
+                         <button class="main-container__top__right__button--temp">Temperature</button>
+                         <button class="main-container__top__right__button--prec">Precipitation</button>
+                         <button class="main-container__top__right__button--wind">Wind</button>
+                    </div>
+ 
+                </div>
+ 
+            </div>
+</div>

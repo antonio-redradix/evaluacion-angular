@@ -1,0 +1,13 @@
+<!-- routerLink="/list/{{i}}" -->
+<div  >
+     <div class="main-container__bottom" >
+          <div class="main-container__bottom--day" *ngFor="let weather of weather; index as i" 
+          routerLink="/list/{{i}}" (click)="selectItem(weather)" 
+          [class.painted]="selectedWeather != null && weather == selectedWeather"
+          >
+               <p>{{weather.day.substring(0, 3)}}</p>  
+               <img src="{{weather.imgRoute}}" alt="">
+               <p><span> {{weather.min_temp}}°</span> {{weather.max_temp}}°</p>
+          </div>
+     </div>
+</div>

@@ -1,29 +1,27 @@
+# Examen
 
-# Ejercicio evaluación Angular
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-En este ejercicio se evaluará la capacidad del alumno de transladar un diseño y unas especificaciones a un proyecto real en Angular. Los alumnos deberan crear el proyecto desde cero utilizando la CLI de Angular.
+## Development server
 
-Cada alumno publicará su solución en una rama de este mismo roepositorio que nombrará con el siguiente formato: **entrega_nombre-apellido1-apellido2**
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-## Ejercicio
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-El objetivo es trasladar el widget meteorológico del primer ejercicio a un proyecto de Angular e implementar la lógica del widget. Los alumnos pueden reutilizar todo el código HTML y CSS que ya han implementado.
+## Build
 
-### Diseño desktop
-![Diseño desktop](https://i.imgur.com/P14vt1W.png)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Requisitos
+## Running unit tests
 
-La evaluación se hará teniendo  en cuenta la cantidad de requisitos completados y la corrección del código.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
- - Crea un proyecto Angular y divídelo en componentes
-	 - La información de la parte superior debe estar encapsulada dentro de un componente
-	 - Las tarjetas de la parte inferior deben estar encapsuladas en otro componente
- - Carga los datos meteorológicos de la semana de este enlace `.json` `https://api.myjson.com/bins/qds5w`
-	 - La petición debe realizarla un **servicio** de Angular
-	 - La petición debe utilizar el módulo HttpClient y Observables
- - Substituye los valores del componente inferior con la información del servicio
- - Substituye los valores del componente superior con la información del servicio (día 0)
- - Utiliza routing para que al final de la url de la página se pueda especificar el día que se va a mostrar en el componente superior
-	 -  Al pulsar una de las tarjetas inferiores se deben cargar los datos de ese día específico
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
