@@ -1,0 +1,67 @@
+<div class="timeWidgetElements--timeCard" *ngFor='let weather of weather; index as i' 
+[class.selected]= "selectDay != undefined && weather == selectDay"
+routerLink='/weather/{{i}}'
+>
+    <p class="text__small text__lightColor">{{weather.day}}</p>
+    <img src="{{weather.imgRoute}}" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">{{weather.max_temp}}º</p>
+        <p class="text__small text__lightColor">&nbsp;{{weather.min_temp}}º</p>
+    </div>
+</div> 
+<!-- <div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Mon</p>
+    <img src="../assets/weather-images/rain_s_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">16º</p>
+        <p class="text__small text__lightColor">&nbsp;7º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Tue</p>
+    <img src="../assets/weather-images/partly_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">14º</p>
+        <p class="text__small text__lightColor">&nbsp;5º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Wed</p>
+    <img src="../assets/weather-images/partly_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">14º</p>
+        <p class="text__small text__lightColor">&nbsp;5º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Thu</p>
+    <img src="../assets/weather-images/rain_s_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">14º</p>
+        <p class="text__small text__lightColor">&nbsp;3º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Fri</p>
+    <img src="../assets/weather-images/partly_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">12º</p>
+        <p class="text__small text__lightColor">&nbsp;4º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Sat</p>
+    <img src="../assets/weather-images/partly_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">13º</p>
+        <p class="text__small text__lightColor">&nbsp;6º</p>
+    </div>
+</div>
+<div class="timeWidgetElements--timeCard">
+    <p class="text__small text__lightColor">Sun</p>
+    <img src="../assets/weather-images/rain_s_cloudy.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">12º</p>
+        <p class="text__small text__lightColor">&nbsp;4º</p>
+    </div>
+</div> --> 
