@@ -1,0 +1,35 @@
+<div class="SingleDayWeather" *ngIf="Day">
+    <div class="SingleDayWeather__DayInfo">
+
+        <div class="SingleDayWeather__Text">
+            <h1>Madrid</h1>
+            <span>{{Day.day}} 08:00</span>
+            <span>{{Day.weather}}</span>
+        </div>
+
+        <div class="SingleDayWeather__DayInfo__Temperature">
+            <img src="../../assets/weather-imagenes/{{Day.weather}}.png" alt="">
+            <span class="Degrees">{{Day.current_temp}}</span>
+            <div class="Degrees--Unit">
+               <span (click)="ChangeUnit('celsius')">ºC</span>  | <span (click)="ChangeUnit('farenheit')">ºF</span>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="SingleDayWeather__WeatherInfo">
+
+            <div class="SingleDayWeather__Text">
+                    <span>Precipitation: {{Day.precip}}</span>
+                    <span>Humidity: {{Day.humidity}}</span>
+                    <span>Wind: {{Day.wind}}</span>
+            </div>
+
+            <div class="SingleDayWeather__WeatherInfo__Options">
+                <input type="button" value="Temperature">
+                <input type="button" value="Precipitation">
+                <input type="button" value="Wind">
+            </div>
+    </div>
+</div>

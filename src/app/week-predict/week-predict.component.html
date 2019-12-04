@@ -1,0 +1,11 @@
+<div class="weatherBoard__NextDays">
+    <div *ngFor="let day of Days; index as i" class="weatherBoard__NextDays__DayCard" (click)="selectDay(day, i)" 
+    routerLink="/weather/{{i+1}}" [class.weatherBoard__NextDays__DayCard--Selected]="DayClicked == i">
+            <span>{{day.day.substring(0,3)}}</span>
+            <img src="../../assets/weather-imagenes/{{day.weather}}.png" alt="">
+            <div>
+                <span class="Degrees--Little--Top">{{day.min_temp}}º</span>
+                <span class="Degrees--Little--Low">{{day.max_temp}}º</span>
+            </div>
+    </div>
+</div>
