@@ -1,0 +1,42 @@
+<!-- Main body of the widget (day info) -->
+<div class="dayInfo">
+    <div  *ngIf="weekWeatherArr !==undefined" class="dayInfo__main">
+        <div class="dayInfo__main--top">
+            <h1 class="dayInfo__main__title">Madrid</h1>
+            <p class="dayInfo__main__text">Sunday 08:00</p>
+            <p class="dayInfo__main__text">{{weekWeatherArr[numSelected].weather}}</p>
+        </div>
+        <div class="dayInfo__main--bottom">
+            <div class="dayInfo__main--bottom--left">
+                <img class="dayInfo__main--bottom--left__img" src="../../assets/img/{{weekWeatherArr[numSelected].weather}}.png" alt="partly_cloudy">
+            </div>
+            
+            <div class="dayInfo__main--bottom--right">
+                <span class="dayInfo__main--bottom--right__number">{{fahrenheitDegrees || weekWeatherArr[numSelected].current_temp}}</span>
+                <span class="dayInfo__main--bottom--right__symbol">ºC | </span>
+                <span class="dayInfo__main--bottom--right__symbol btn" (click)="changeDegrees()" href="#" target="_blank" rel="noopener noreferrer">ºF</span>
+
+            </div>
+        </div>
+    </div>
+
+    <hr class="separator separator--top">
+    
+    <div *ngIf="weekWeatherArr !==undefined" class="dayInfo__secundary">
+        <div class="dayInfo__secundary--top">
+            <p class="dayInfo__main__text">Precipitation: {{weekWeatherArr[numSelected].precip}}</p>
+            <p class="dayInfo__main__text">Humidity: {{weekWeatherArr[numSelected].humidity}}</p>
+            <p class="dayInfo__main__text">Wind: {{weekWeatherArr[numSelected].wind}}</p>
+        </div>
+        <div class="dayInfo__secundary--bottom">
+            <table class="dayInfo__secundary__table">
+                <tr>
+                    <td class="dayInfo__secundary__table__elem">Temperature</td>
+                    <td class="dayInfo__secundary__table__elem">Precipitation</td>
+                    <td class="dayInfo__secundary__table__elem">Wind</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<hr class="separator separator--bottom">

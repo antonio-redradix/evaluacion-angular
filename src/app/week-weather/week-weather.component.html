@@ -1,0 +1,10 @@
+<div class="weekInfo">
+    <div *ngFor="let elem of weekWeatherArr, index as i" (click)="selectDay(i)" [class.selected]="elem.render == true" routerLink="/day/{{i}}" class="weekInfo__dayBox">
+        <span class="weekInfo__dayBox__title">{{elem.day.slice(0,3)}}</span>
+        <img class="weekInfo__dayBox__img" src="../../assets/img/{{elem.weather}}.png" alt="partly_cloudy">
+        <div class="weekInfo__dayBox__temp">
+            <span class="weekInfo__dayBox__temp--max">{{elem.min_temp}}º </span>
+            <span class="weekInfo__dayBox__temp--min">{{elem.max_temp}}º </span>
+        </div>
+    </div>    
+</div>

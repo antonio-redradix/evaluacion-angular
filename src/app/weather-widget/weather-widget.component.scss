@@ -1,0 +1,27 @@
+// Import common styles
+@import '../../commonStyles.scss';
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $base-color-strongGray;
+  line-height: 1.4rem;
+}
+.separator {
+  display: none;
+}
+
+.widget {
+  background-color: white;
+  width: 60vw;
+  min-height: 50vh;
+  border: 1px solid $base-color-gray;
+  border-radius: 10px;
+  padding: 20px 20px;
+}

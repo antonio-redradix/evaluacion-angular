@@ -1,0 +1,116 @@
+@import '../../commonStyles.scss';
+
+.dayInfo {
+    @include width-height(100%, 65%);
+    display: flex;
+    flex-direction: row;
+  
+    &__main {
+      @include width-height(60%, 100%);
+  
+      &--top {
+        @include width-height(100%, 50%);
+      }
+  
+      &--bottom {
+        @include width-height(100%, 50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: black;
+        padding-top: 20px;
+  
+        &--left {
+          @include width-height(30%);
+          display: flex;
+          justify-content: center;
+  
+          &__img {
+            @include width-height(80%, 80%)
+          }
+        }
+  
+        &--right {
+          @include width-height(70%);
+          display: flex;
+          align-items: flex-start;
+  
+          &__number {
+            transform-origin: 100% 50%;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 3rem;
+          }
+  
+          &__symbol {
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: 0.1rem;
+          }
+        }
+      }
+  
+      &__title {
+        font-size: 1.8rem;
+        padding-bottom: 7px;
+      }
+  
+      &__text {
+        font-size: 1.1rem;
+        line-height: 1.5  rem;
+      }
+    }
+  
+    &__secundary {
+      @include width-height(40%, 100%);
+  
+      &--top {
+        @include width-height(100%, 35%);
+      }
+  
+      &--bottom {
+        @include width-height(100%, 65%);
+      }
+  
+      &__table {
+        @include width-height(100%, 15%);
+        background-color: rgb(245, 243, 243);
+        border: 1px solid $base-color-gray;
+        text-align: center;
+        margin: 20px 0;
+  
+        &__elem {
+          width: calc(100% / 3);
+          color:$standard-black;
+          font-weight: bold;
+          font-size: 0.7rem;
+          padding: 3px 0;
+          transition-property: border, background-color;
+          transition-duration: 300ms;
+          transition-timing-function: linear;
+          transition-delay: 0s;
+  
+          &:hover {
+            box-shadow: 0 0 2px 2px rgb(160, 154, 154) inset;
+            background-color: rgb(214, 211, 211);
+            cursor: pointer;
+          }
+  
+          &:visited {
+            box-shadow: 0 0 2px 2px rgb(160, 154, 154) inset;
+            background-color: rgb(214, 211, 211);
+          }
+        }
+  
+        & :nth-child(2) {
+          border-left: 1px solid $base-color-gray;
+          border-right: 1px solid $base-color-gray;
+        }
+      }
+    }
+  }
+
+  .btn {
+    color: blue;
+    cursor: pointer;
+  }
