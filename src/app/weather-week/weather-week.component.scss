@@ -1,0 +1,89 @@
+.section{
+  &__futureWeather{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 15px;
+    &__item{
+      width: 65px;
+      height: 100px;
+      box-sizing: border-box;
+      border: 1px solid white;
+      transition: 2s;
+      outline: 0;
+      &:hover{
+        border: 1px solid #DFE1E5;
+        background-color: #FCFCFC;
+      }
+      &:active{
+        border: 1px solid #DFE1E5;
+        background-color: #FCFCFC;
+      }
+    }
+  }
+  &__text{
+    font-family: Arial;
+    color: #878797;
+    line-height: 23px;
+    &--item{
+      @extend .section__text;
+      font-size: 14px;
+      text-align: center;
+      padding: 0px 4px;
+      &--bold{
+        @extend .section__text--item;
+        font-weight: bold;
+      }
+    }
+  }
+  &__image{
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 25px;
+    &--itemImage{
+      background-position: center;
+      width: 75%;
+      height: 50px;
+      margin: auto;
+      &--partlyCloudy{
+        @extend .section__image--itemImage;
+        background-image: url("../../assets/images/partly_cloudy.png");
+      }
+      &--rainCloudy{
+        @extend .section__image--itemImage;
+        background-image: url("../../assets/images/rain_s_cloudy.png");
+      }
+      &--rainLight{
+        @extend .section__image--itemImage;
+        background-image: url("../../assets/images/rain_light.png");
+      }
+      &--cloudy{
+        @extend .section__image--itemImage;
+        background-image: url("../../assets/images/cloudy.png");
+      }
+      &--sunny{
+        @extend .section__image--itemImage;
+        background-image: url("../../assets/images/sunny.png");
+      }
+    }
+  }
+}
+
+.selected{
+  border: 1px solid #DFE1E5;
+  background-color: #FCFCFC;
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .section{
+    &__image{
+      justify-content: center;
+    }
+    &__futureWeather{
+      flex-flow: row wrap;
+      margin-top: 30px;
+      width: auto;
+      padding-top: 0px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="section__actualWeather">
+    <div class="section__text--city">
+        <p><b>Madrid</b></p>
+    </div>
+    <div class="section__text--info">
+        <p>{{selectedDay.day}} 08:00</p>
+        <p>{{selectedDay.weather}}</p>
+    </div>
+    <div class="section__image">
+        <div [class.section__image--partlyCloudy]="selectedDay.weather == 'Partly Cloudy'"
+        [class.section__image--sunny]="selectedDay.weather == 'Sunny'"
+        [class.section__image--rainLight]="selectedDay.weather == 'Scattered Showers'"
+        [class.section__image--cloudy]="selectedDay.weather == 'Cloudy' || selectedDay.weather == 'Mostly Cloudy'">
+        </div>
+        <div class="section__text--temperature">{{selectedDay.current_temp}}</div>
+        <div class="section__text--scale">ºC | <a class="section__text--link" href="https://www.google.com/">ºF</a></div>
+    </div>
+</div>
+<div class="section__actualInfo">
+    <div class="section__text--info">
+        <div class="centerResp">
+            <p>Precipitation: {{selectedDay.precip}}</p>
+            <p>Humidity: {{selectedDay.humidity}}</p>
+            <p>Wind: {{selectedDay.wind}}</p>
+        </div>
+        <div class="section__actualInfo__buttons">
+            <button type="button" class="section__text--button">Temperature</button>
+            <button type="button" class="section__text--button">Precipitation</button>
+            <button type="button" class="section__text--button">Wind</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="section__futureWeather">
+    <div *ngFor="let day of week;index as i" routerLink="/list/{{i+1}}" [class.selected]="selectedDay==day" class="section__futureWeather__item">
+        <div class="section__text--item" *ngIf="day.day=='Monday'">Mon</div>
+        <div class="section__text--item" *ngIf="day.day=='Tuesday'">Tue</div>
+        <div class="section__text--item" *ngIf="day.day=='Wednesday'">Wed</div>
+        <div class="section__text--item" *ngIf="day.day=='Thursday'">Thu</div>
+        <div class="section__text--item" *ngIf="day.day=='Friday'">Fri</div>
+        <div class="section__text--item" *ngIf="day.day=='Saturday'">Sat</div>
+        <div class="section__text--item" *ngIf="day.day=='Sunday'">Sun</div>
+        <div [class.section__image--itemImage--partlyCloudy]="day.weather == 'Partly Cloudy'"
+        [class.section__image--itemImage--sunny]="day.weather == 'Sunny'"
+        [class.section__image--itemImage--rainLight]="day.weather == 'Scattered Showers'"
+        [class.section__image--itemImage--cloudy]="day.weather == 'Cloudy' || day.weather == 'Mostly Cloudy'">
+        </div>
+        <div class="section__text--item"><span class="section__text--item--bold">{{day.max_temp}}º</span>{{day.min_temp}}º</div>
+    </div>
+</div>

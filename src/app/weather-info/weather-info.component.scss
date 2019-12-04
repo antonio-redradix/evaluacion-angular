@@ -1,0 +1,114 @@
+.section{
+  &__actualWeather{
+    width: 55%;
+    height: auto;
+    padding: 10px 19px;
+  }
+  &__actualInfo{
+    width: 35%;
+    height: auto;
+    padding-top: 20px;
+    &__buttons{
+      display: flex;
+    }
+  }
+  &__text{
+    font-family: Arial;
+    color: #878797;
+    line-height: 0px;
+    &--city{
+      @extend .section__text;
+      font-size: 25px;
+      color: #878797;
+    }
+    &--info{
+      @extend .section__text;
+      font-size: 16px;
+      color: #878787;
+      line-height: 5px;
+      padding-bottom: 10px;
+    }
+    &--link{
+      @extend .section__text--info;
+      color: blue;
+      text-decoration: none;
+    }
+    &--temperature{
+      @extend .section__text;
+      font-size: 60px;
+      color: black;
+      padding-top: 12px;
+      padding-left: 15px;
+      line-height: 20px;
+    }
+    &--scale{
+      @extend .section__text--info;
+      color: black;
+      padding-left: 5px;
+      display: contents;
+    }
+    &--button{
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: bold;
+      border: 1px solid #D8D8D8;
+      background-color: #F2F2F2;
+      padding: 6px 10px;
+      margin-top: 20px;
+      outline: 0;
+      &:hover{
+        background-color: #ECECEC;
+      }
+    }
+  }
+  &__image{
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    display: -webkit-inline-box;
+    &--partlyCloudy{
+      @extend .section__image;
+      background-image: url("../../assets/images/partly_cloudy.png");
+    }
+    &--rainCloudy{
+      @extend .section__image;
+      background-image: url("../../assets/images/rain_s_cloudy.png");
+    }
+    &--rainLight{
+      @extend .section__image;
+      background-image: url("../../assets/images/rain_light.png");
+    }
+    &--cloudy{
+      @extend .section__image;
+      background-image: url("../../assets/images/cloudy.png");
+    }
+    &--sunny{
+      @extend .section__image;
+      background-image: url("../../assets/images/sunny.png");
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .centerResp{
+    padding-left: 60px;
+  }
+  .section{
+    &__actualWeather{
+      width: 100%;
+      text-align: center;
+      padding: 20px 0px;
+      border-bottom: 1px solid #959595;
+    }
+    &__image{
+      justify-content: center;
+    }
+    &__actualInfo{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      border-bottom: 1px solid #959595;
+      padding-bottom: 25px;
+    }
+  }
+}
