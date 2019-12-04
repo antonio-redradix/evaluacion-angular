@@ -1,0 +1,29 @@
+<div class="timeWidgetElements--main" *ngIf="weathers!==undefined">
+    <div class="timeWidgetElements--main--upper">
+        <div>
+            <h2>Madrid</h2>
+            <p>{{selectedDay.day}} 08:00</p>
+            <p>{{selectedDay.weather}}</p>
+        </div>
+    </div>
+    <div class="timeWidgetElements--main--lower">
+        <img src="{{getWeather(selectedDay)}}" class="timeIcon">
+        <div class="timeWidgetElements--main--lower--temperature">
+            <p class="text--degrees">{{selectedDay.current_temp}}</p>
+            <p (click)="changeToC()">ºC |</p><p (click)="changeToF()">&nbsp;ºF</p>
+        </div>                    
+    </div>
+</div>            
+<div class="divider"></div>
+<div class="timeWidgetElements--options">
+    <div class="timeWidgetElements--options--info">
+        <div>
+            <p class="text__spaced">Precipitation: {{selectedDay.precip}}<br>Humidity: {{selectedDay.humidity}}<br>Wind: {{selectedDay.wind}}</p>
+        </div>
+    </div>
+    <div class="timeWidgetElements--options--buttons">
+        <a href="#" class="button__left button--pressed">Temperature</a>
+        <a href="#" class="button">Precipitation</a>
+        <a href="#" class="button__right">Wind</a>
+    </div>
+</div>
