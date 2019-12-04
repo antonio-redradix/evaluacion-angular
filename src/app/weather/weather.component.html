@@ -1,0 +1,4 @@
+<div class="timeWidget" *ngIf="dailyweather!=undefined">
+  <app-weather-day [dailyweather]="dailyweather" class="timeWidget--upperSection"></app-weather-day>
+  <app-weather-week [dailyweather]="dailyweather" [selectedId]="id" [weather]="weather" class="timeWidget--lowerSection"></app-weather-week>
+</div>

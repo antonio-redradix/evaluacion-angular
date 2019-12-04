@@ -1,0 +1,9 @@
+<div class="timeWidgetElements--timeCard" *ngFor="let day of weather; index as id"
+routerLink="/weather/{{id}}" [class.selected]="dailyweather==day">
+    <p class="text__small text__lightColor">{{day.day.substring(0,3)}}</p>
+    <img src="../assets/weather-images/{{day.weather}}.png" class="timeIcon__small">
+    <div class="flex__row">
+        <p class="text__small">{{day.max_temp}}º</p>
+        <p class="text__small text__lightColor">&nbsp;{{day.min_temp}}º</p>
+    </div>
+</div>

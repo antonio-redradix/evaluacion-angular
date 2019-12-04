@@ -1,0 +1,29 @@
+<div class="timeWidgetElements--main" >
+    <div class="timeWidgetElements--main--upper">
+        <div>
+            <h2>Madrid</h2>
+            <p>{{dailyweather.day}}</p>
+            <p>{{dailyweather.weather}}</p>
+        </div>
+    </div>
+    <div class="timeWidgetElements--main--lower">
+        <img src="../assets/weather-images/{{dailyweather.weather}}.png" class="timeIcon">
+        <div class="timeWidgetElements--main--lower--temperature">
+            <p class="text--degrees">{{dailyweather.current_temp}}</p>
+            <p>ºC |</p><a href="" target="_blank">&nbsp;ºF</a>
+        </div>                    
+    </div>
+</div>            
+<div class="divider"></div>
+<div class="timeWidgetElements--options">
+    <div class="timeWidgetElements--options--info">
+        <div>
+            <p class="text__spaced">Precipitation: {{dailyweather.precip}}<br>Humidity: {{dailyweather.humidity}}<br>Wind: {{dailyweather.wind}}</p>
+        </div>
+    </div>
+    <div class="timeWidgetElements--options--buttons">
+        <a href="#" class="button__left button--pressed">Temperature</a>
+        <a href="#" class="button">Precipitation</a>
+        <a href="#" class="button__right">Wind</a>
+    </div>
+</div>
