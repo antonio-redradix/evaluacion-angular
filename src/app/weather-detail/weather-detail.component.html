@@ -1,0 +1,24 @@
+<div *ngIf="selectedDay!=null" class="detail">
+    <div class="detail__main">
+        <h3 class="detail__main__city">Madrid</h3>
+        <h4 class="detail__main__time">{{selectedDay.day}} {{currentTime}}</h4>
+        <h4 class="detail__main__state">{{selectedDay.weather}}</h4>
+        <div class="detail__main__resume">
+            <img class="detail__main__resume__icon" src="../../assets/img/{{selectedDay.img}}.png" alt="" srcset="">
+            <h2 class="detail__main__resume__grade">{{selectedDay.current_temp}}</h2>
+            <p class="detail__main__resume__units--cel"><span (click)="changeTempUnits()" [class.highlighted] = "selectedDay.unit === 'C'">°C</span>| </p><a (click)="changeTempUnits()" class="detail__main__resume__units--far"[class.highlighted] = "selectedDay.unit === 'F'"> °F</a>
+        </div>
+    </div>
+    <div class="detail__secondary">
+        <div class="detail__secondary__info">
+            <h4>Precipitation: {{selectedDay.precip}}</h4>
+            <h4>Humidity: {{selectedDay.humidity}}</h4>
+            <h4>Wind: {{selectedDay.wind}}</h4>
+        </div>
+        <div class="detail__secondary__btn">
+            <button class="detail__secondary__btn--left">Temperature</button>
+            <button class="detail__secondary__btn--center">Precipitation</button>
+            <button class="detail__secondary__btn--right">Wind</button>
+        </div>
+    </div>
+</div>

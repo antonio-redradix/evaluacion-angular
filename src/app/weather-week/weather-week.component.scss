@@ -1,0 +1,41 @@
+.week{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: #CECECE;
+    text-align: center;
+    
+    &__day{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+
+        &__temperature{
+            text-align: center;
+            &--max{
+            color: #A5A5A5;
+            }
+        }
+
+        &:hover{
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 0, 0.651);
+            outline:0;
+        }
+    }
+}
+
+.selected{
+    background-color: rgba(255, 255, 112, 0.61);
+    border-color: yellow;
+    outline:0;
+}
+
+
+@media  only screen and (max-width: 700px){
+    .week{
+        padding-top: 30px;
+    }
+}

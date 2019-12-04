@@ -1,0 +1,15 @@
+<div class="widgetapp">
+
+    <app-weather-detail
+        class="detail"
+        [selectedDay]='selectedDay'
+        [forecast]='forecast'
+    ></app-weather-detail>
+    
+    <app-weather-week
+        class="week"
+        [forecast]='forecast'
+        [selectedDayIndex]= 'selectedDayIndex'
+    ></app-weather-week>
+    
+</div>

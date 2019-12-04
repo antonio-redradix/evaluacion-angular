@@ -1,0 +1,18 @@
+.widgetapp{
+border: 1px solid #e1e3e7;
+border-radius: 10px;
+width: 600px;
+height: 330px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 25px 25px 25px 20px;
+}
+
+@media  only screen and (max-width: 700px){
+    .widgetapp{
+        height: auto;
+        text-align: center;
+        border: none;
+    }
+}   

@@ -1,0 +1,5 @@
+<div class="week__day" *ngFor="let day of forecast; index as i" routerLink="/weather/{{i}}" [class.selected]="i === selectedDayIndex">
+    <p class="week__day__name">{{day.abrev}}</p>
+    <img class="week__day__icon" src="../../assets/img/{{day.img}}.png" alt="" srcset="">
+    <p class="week__day__temperature"><span class="week__day__temperature--max">{{day.max_temp}}° </span>  {{day.min_temp}}° </p>
+</div>
