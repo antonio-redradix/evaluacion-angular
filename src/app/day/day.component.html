@@ -1,0 +1,33 @@
+<div *ngIf="weatherSelected != null" class="widget__today">
+    <div class="widget__today__left">
+        <div>
+            <p class="text--city">Madrid</p>
+            <p class="text">{{weatherSelected.day}} {{currentHour}}</p>
+            <p class="text">{{weatherSelected.weather}}</p>
+            
+        </div>
+        <div class="temp-container">
+                <img *ngIf="weatherSelected.weather == 'Partly Cloudy'" src="assets/img/partly_cloudy.png">
+                <img *ngIf="weatherSelected.weather == 'Cloudy'" src="assets/img/cloudy.png">
+                <img *ngIf="weatherSelected.weather == 'Scattered Showers'" src="assets/img/scattered_showers.png">
+                <img *ngIf="weatherSelected.weather == 'Sunny'" src="assets/img/sunny.png">
+                <img *ngIf="weatherSelected.weather == 'Mostly Cloudy'" src="assets/img/mostly_cloudy.png">
+                <p class="text--temp">{{weatherSelected.current_temp}}</p>
+                <a (click)="changeTemperature('Celsius')" [class.selectedLink]="temperatureMode == 'Fahrenheit'">ºC |</a> 
+                <a (click)="changeTemperature('Fahrenheit')" [class.selectedLink]="temperatureMode == 'Celsius'">ºF</a>
+            </div>
+    </div>
+    <div class="widget__today__right">
+        <div>
+            <p>Precipitation: {{weatherSelected.precip}}</p>
+            <p>Humidity: {{weatherSelected.humidity}}</p>
+            <p>Wind: {{weatherSelected.wind}}</p>
+            
+        </div>
+        <div class="btn-container">
+                <button>Temperature</button>
+                <button>Precipitation</button>
+                <button>Wind</button>
+            </div>
+    </div>
+</div>

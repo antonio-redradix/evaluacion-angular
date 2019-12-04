@@ -1,0 +1,7 @@
+<div class="widget__week">
+    <button routerLink="/weather/{{i}}" *ngFor="let weather of weatherList; index as i" [class.highlighted]="weatherSelected != null && weatherSelected == weather">
+        <p>{{weather.day}}</p>
+        <img  src={{weather.imgRoute}}>
+        <p><span>{{weather.min_temp}}º </span> {{weather.max_temp}}º</p>
+    </button>
+</div>

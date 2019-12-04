@@ -1,0 +1,20 @@
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.widget {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    width: 630px;
+    height: auto;
+}
+

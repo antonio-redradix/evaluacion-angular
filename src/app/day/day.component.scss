@@ -1,0 +1,121 @@
+.widget {
+    &__today {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1.7;
+        //background-color: rgb(39, 39, 39);
+        .text {
+            color: #898A87;
+            font-size: 16px;
+            &--city {
+                color: #898A87;
+                font-size: 25px;
+                margin-bottom: 5px;
+            }
+            &--temp {
+                font-size: 60px;
+            }
+        }
+
+        .temp-container {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            height: 100px;
+        }
+
+        &__left {
+            flex: 1;
+            //background-color: rgb(131, 45, 45);
+            box-sizing: content-box;
+        }
+        &__right {
+            flex: 1;
+            //background-color: rgb(97, 97, 97);
+            > div {
+                line-height: 21px;
+                color: #898A87;
+            }
+            .btn-container {
+                display: flex;
+                margin-top: 20px;
+                button {
+                    font-weight: bold;
+                    background-color: #F2F2F2;
+                    border: solid 0.5px #DEDEDE;
+                    border-collapse: collapse;
+                    border-radius: 2px;
+                    height: 30px;
+                    font-size: 12px;
+                    flex: 1;
+                    transition: 0.4s;
+                    &:hover {
+                        background-color: #E3E3E3;
+                    }
+                }
+            }
+            
+        }
+        p {
+            font-family: 'Arial';
+        }
+    
+        a {
+            font-family: 'Arial';
+            //text-decoration: none;
+        }
+    
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    
+}
+.selectedLink {
+    color: blue;
+}
+@media (max-width: 500px) {
+    .widget {
+        &__today {
+            margin-bottom: 0;
+            flex-flow: column;
+            &__left {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: solid 1px #aaaaaa;
+
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+
+                > div{
+                  width: 125px;
+                }
+
+                .temp-container {
+                  width: auto;
+                }
+            }
+            &__right {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: solid 1px #aaaaaa;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                > div{
+                  width: 125px;
+                }
+
+                .btn-container{
+                  width: auto;
+                  button{
+                    width: 100px;
+                  }
+                }
+            }
+
+        }
+    }
+}
