@@ -1,0 +1,89 @@
+.leftcolumn {
+    width: 450px;
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    
+  }
+  
+  .rightcolumn {
+    width: 400px;
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .Nowinfo {
+    height:130px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+    &__img {
+      width: 80px;
+      height: 75px;
+      margin-right: 10px;
+    }
+  
+    &__text {
+      font-family: Arial;
+      display: inline-block;
+      font-size: 50px;
+  
+      &--sub {
+        font-family: Arial;
+        vertical-align: text-top;
+        font-size: 20px;
+      }
+    }
+  
+  }
+  .Todaysprediction {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  
+    &__text {
+      font-family: Arial;
+      color: #88878B;
+      font-size: 20px;
+    }
+  }
+  
+  .Buttongroup {
+   
+    &__button {
+      font-family: Arial;
+      border: 1px solid gray;
+      color: black;
+      background-color: #EBEBEB;
+      padding: 10px 24px;
+      cursor: pointer;
+      float: left;
+      font-weight: bold;
+  
+      & :not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
+
+  .Todaysweather {
+    margin-top: 20px;
+    margin-left: 20px;
+  
+    &__text {
+      font-family: Arial;
+      color: #88878B;
+      font-size: 20px;
+  
+      &--big {
+        font-size: 50px;
+        display: inline-block;
+      }
+    }
+  
+  }
+
+  
+  

@@ -1,0 +1,10 @@
+<div class="dailyweathercontainer">
+        <div class="dailyweatherinfo" [class.highlighted]="selected==day" *ngFor="let day of weather; index as i" routerLink="/weather/{{i}}" >
+                <p class="dailyweatherinfo__text">{{day.day.substr(0,3)}}</p>
+                    <img class="dailyweatherinfo__img" src="{{getsrc(day)}}">
+                    <div class="dailyweatherinfo__text">
+                            {{day.max_temp}} <p class="dailyweatherinfo__text--black">{{day.min_temp}}º</p>
+                    </div>
+                
+        </div>
+    </div>

@@ -1,0 +1,37 @@
+
+  <div>
+
+    <div class="leftcolumn">
+            <div class="Todaysweather">
+                    <p class="Todaysweather__text">Madrid</p>
+                    <p class="Todaysweather__text">{{selected.day}} 8:00</p>
+                    <p class="Todaysweather__text">{{selected.weather}}</p>
+            </div>
+            <div class="Nowinfo">
+                    <img class="Nowinfo__img" src="{{getsrc()}}" >
+                    <p class="Nowinfo__text">{{selected.current_temp}}
+                            <sub (click)=change() class="Nowinfo__text--sub">ºC|
+                                    <span>Fº</span>
+                            </sub>
+                        </p>
+
+            </div>
+
+
+    </div>
+    <div class="rightcolumn">
+            <div class="Todaysprediction">
+                    <p class="Todaysprediction__text">Precipitation : {{selected.precip}}</p>
+                    <p class="Todaysprediction__text">Humidity :{{selected.humidity}}</p>
+                    <p class="Todaysprediction__text">Wind : {{selected.wind}}</p>
+
+
+            </div>
+            <div class="Buttongroup">
+                    <input class="Buttongroup__button" type="button" value="Temperature">
+                    <input class="Buttongroup__button" type="button" value="Precipitation">
+                    <input class="Buttongroup__button" type="button" value="Wind">
+            </div>
+
+    </div>
+</div>

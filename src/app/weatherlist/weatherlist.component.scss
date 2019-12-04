@@ -1,0 +1,52 @@
+.dailyweatherinfo {
+    margin: 5px;
+    width: 11%;
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 2s;
+    border: 2px solid white;
+  
+    &__img {
+      width: 45px;
+      height: 45px;
+      align-self: center
+    }
+  
+    &__text {
+      padding-left: 20px;
+      font-family: Arial;
+      color: #9F9F9F;
+      font-size: 14px;
+      font-weight: bold;
+      align-self: center;
+      justify-content: center;
+      width: 62px;
+      height: 20px;
+      display: inline-block;
+  
+      &--black {
+        font-family: Arial;
+        display: inline-block;
+        color: #D9D9D9;
+  
+      }
+    }
+  
+    &:hover {
+      background-color: #FCFCFC;
+      border-color: gray;
+    }
+  
+  }
+  .dailyweathercontainer {
+    margin-top:5px;
+    width: 850px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .highlighted{
+    background-color: #EFF0F2;
+  }
