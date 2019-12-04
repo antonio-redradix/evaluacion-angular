@@ -1,0 +1,42 @@
+.weather__down{
+	&__prevision{
+		width: 100%;
+		margin: 2%;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+		justify-content: space-between;
+
+		&__element{
+			align-items: center;
+			padding: 10px;
+			border: 1px solid white;
+			transition: background-color;
+			transition: border;
+				transition-duration: 0.5s;
+				transition-timing-function: linear;
+			span {
+				font-weight: bold;
+			}
+			img{
+				height: auto;
+				width: 100%;
+			}
+			&:hover{
+				border: 1px solid #9FB4B1;
+				background-color: #f2f2f2;
+			}
+		}
+	}
+}
+.weatherSelected{
+	border: 1px solid #9FB4B1;
+	background-color: #f2f2f2;
+}
+
+.FahrenheitGrades{
+	font-size: 15px;
+}

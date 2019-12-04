@@ -1,0 +1,45 @@
+<div class="weather__up__mainInfo" *ngIf="selectedDay != undefined">
+	<div class="weather__up__mainInfo__title">
+		<div class="weather__up__mainInfo__title--city">Madrid</div>
+		<div class="weather__up__mainInfo__title--date">{{selectedDay.day}} 08:00</div>
+		<div class="weather__up__mainInfo__title--weather">{{selectedDay.weather}}</div>
+	</div>
+	<div class="weather__up__mainInfo__temp">
+		<div class="weather__up__mainInfo__temp--todayIcon">
+			<img src="../../assets/{{selectedDay.weather}}.png">
+		</div>
+		<div class="weather__up__mainInfo__temp--todayGrades">
+			<div *ngIf="currentGrades == 'Celsius';then Celsius else Fahrenheit">
+			</div>
+			<ng-template #Celsius>
+				<p>
+				{{selectedDay.current_temp}}
+				</p>
+			</ng-template>
+			<ng-template #Fahrenheit>
+				<p>
+				{{ (selectedDay.current_temp * 9 / 5) + 32}}
+				</p>
+			</ng-template>
+			<span>
+				<a (click)="changeCelsius(selectedDay.current_temp)">ºC</a>  
+					| 
+				<a (click)="changeFahrenheit(selectedDay.current_temp)">ºF</a>
+			</span>
+		</div>
+	</div>
+</div>
+<hr class="style1">
+<div class="weather__up__secondaryInfo" *ngIf="selectedDay != undefined">
+	<div class="weather__up__secondaryInfo__data">
+		<p>Precipitation: {{selectedDay.precip}}</p>
+		<p>Himidity: {{selectedDay.humidity}}</p>
+		<p>Wind: {{selectedDay.wind}}</p>
+	</div>
+	<div class="weather__up__secondaryInfo__infoButtons">
+		<button type="button">Temperature</button>
+		<button type="button">Precipitation</button>
+		<button type="button">Wind</button>
+	</div>
+</div>
+<hr class="style1">

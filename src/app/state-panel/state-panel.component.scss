@@ -1,0 +1,71 @@
+.weather__up{
+		&__mainInfo{
+			height: 100%;
+			width: 50%;
+			box-sizing: content-box;
+			&__title{
+				width: 50%;
+				margin-top:5%;
+				margin-left:5%;
+				&--city{
+					font-size: 25px;
+					font-weight: bold;
+				}
+			}
+			&__temp{
+				display:flex;
+				align-content: space-around;
+				align-items: flex-start;
+				box-sizing: content-box;
+				margin-top: 10%;
+				margin-left: 5%;
+				width: 100%;
+				&--todayIcon{
+					display:inline-block;
+					width: 20%;
+					& img {
+						height: auto;
+						width:100%;
+					}
+				}
+				&--todayGrades{
+					display:flex;
+					width: auto;
+					font-size: 70px;
+					color: black;
+					& p{
+						display:inline;
+					}
+					& span{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		&__secondaryInfo{
+			height: 100%;
+			width: 50%;
+			box-sizing: content-box;
+			&__data{
+				margin-top: 5%;
+				& p{
+					margin-top:3px;
+				}
+			}
+			&__infoButtons{
+				margin-top: 5%;
+				display:flex;
+				width: 90%;
+				& button{
+					width: 100%;
+					background-color: #ECECEC;
+					padding: 3%;
+					border: 1px solid #9FB4B1;
+					&:hover{
+						background-color: #dfdfdf;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}

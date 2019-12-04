@@ -1,0 +1,13 @@
+<div class="weatherPanel">
+	<app-state-panel 
+		class="weatherPanel__up" 
+		[selectedDay]="currentDay"
+		(changeSelectedGrades)="updateSelectedGrades($event)">
+	</app-state-panel>
+	<app-prevision-panel 
+		class="weatherPanel__down" 
+		[daysArray]="daysArray" 
+		[currentGrades]="currentGrades"
+		[selectedDay]="currentDayIndex">
+	</app-prevision-panel>
+</div>

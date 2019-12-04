@@ -1,0 +1,23 @@
+<div  class="weather__down__prevision">
+		<div 
+			*ngFor="let day of daysArray; index as i" 
+			[class.weatherSelected]="selectedDay != undefined && i == selectedDay" 
+			routerLink="/weather/{{i}}" 
+			class="weather__down__prevision__element" >
+			<div >
+			<p>{{day.day.substr(0,3)}}</p>
+			<img src="../../assets/{{day.weather}}.png">
+			<div *ngIf="currentGrades == 'Celsius';then Celsius else Fahrenheit">
+			</div>
+			<ng-template #Celsius>
+				<p><span>{{day.max_temp}}º </span>{{day.min_temp}}º</p>
+			</ng-template>
+			<ng-template #Fahrenheit>
+				<p class="FahrenheitGrades">
+					<span> {{ ((day.max_temp * 9 / 5) + 32).toFixed(0)}}º </span>
+					<span> {{ ((day.min_temp * 9 / 5) + 32).toFixed(0) }}º </span>
+				</p>
+			</ng-template>
+		</div>
+		</div>	
+</div>
